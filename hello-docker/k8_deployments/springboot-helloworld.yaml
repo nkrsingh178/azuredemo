@@ -20,8 +20,6 @@ spec:
         image: nkrsingh/myapps:hello-docker-1.0.1-snapshot
         ports:
         - containerPort: 9080
-      imagePullSecrets:
-      - name: mycred
 
 ---
 kind: Service
