@@ -29,7 +29,7 @@ metadata:
     app: helloworld-apps
   name: helloworld-apps
 spec:
- type: NodePort
+ type: LoadBalancer
  ports:
  - port: 80
    targetPort: 9080
