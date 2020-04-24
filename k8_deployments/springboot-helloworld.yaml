@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: helloworld-apps
-        imagePullPolicy: Never
         image:  hellodockeracr.azurecr.io/nkrsingh/myapps:hello-docker-latest
         ports:
         - containerPort: 9080
