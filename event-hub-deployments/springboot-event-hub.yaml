@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: eventhub-apps
+        imagePullPolicy: Always
         image:  hellodockeracr.azurecr.io/nkrsingh/myapps:event-hub-latest
         ports:
         - containerPort: 9080
