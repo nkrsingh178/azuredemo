@@ -1,36 +1,27 @@
 package com.jdp.datalake.entity;
 
-import java.util.Date;
-
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import static org.springframework.data.elasticsearch.annotations.FieldType.Keyword;
 
-@Document(indexName = "Product", type = "productdetails")
+@Document(indexName = "productind", type = "productuser")
 public class ProductCuratedStoreRequest {
 	
-	@Field(type = Keyword)
 	int id;
-	@Field(type = Keyword)
 	String name;
-	@Field(type = Keyword)
 	String category;
-	@Field(type = Keyword)
-	Date expiry;
-	@Field(type = Keyword)
+//	@Field(type = Keyword)
+//	String expiry;
 	String suppliername;
-	@Field(type = Keyword)
 	long ingestionid;
-	public ProductCuratedStoreRequest(int id, String name, String category, Date expiry, String suppliername,
-			long ingestionid) {
-		this.id = id;
-		this.name = name;
-		this.category = category;
-		this.expiry = expiry;
-		this.suppliername = suppliername;
-		this.ingestionid = ingestionid;
-	}
-	
+//	public ProductCuratedStoreRequest(int id, String name, String category, String suppliername,
+//			long ingestionid) {
+//		this.id = id;
+//		this.name = name;
+//		this.category = category;
+////		this.expiry = expiry;
+//		this.suppliername = suppliername;
+//		this.ingestionid = ingestionid;
+//	}
+//	
 	public int getId() {
 		return id;
 	}
@@ -49,12 +40,12 @@ public class ProductCuratedStoreRequest {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public Date getExpiry() {
-		return expiry;
-	}
-	public void setExpiry(Date expiry) {
-		this.expiry = expiry;
-	}
+//	public String getExpiry() {
+//		return expiry;
+//	}
+//	public void setExpiry(String expiry) {
+//		this.expiry = expiry;
+//	}
 	public String getSuppliername() {
 		return suppliername;
 	}

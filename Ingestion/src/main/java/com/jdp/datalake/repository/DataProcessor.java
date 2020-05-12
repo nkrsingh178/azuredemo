@@ -69,7 +69,13 @@ public class DataProcessor {
 			record.setStatus(TrackStatus.VALIDATED.toString());
 			record.setSupplier(productrequest.getSuppliername());
 			repo.save(record);
-			ProductCuratedStoreRequest request =new ProductCuratedStoreRequest(productrequest.getId(),productrequest.getName(),productrequest.getCategory(),productrequest.getExpiry(),productrequest.getSuppliername(),productrequest.getId());
+			ProductCuratedStoreRequest request =new ProductCuratedStoreRequest();
+			
+			request.setCategory(productrequest.getCategory());
+			request.setId(productrequest.getId());
+			request.setIngestionid(productrequest.getId());
+			request.setName(productrequest.getName());
+			request.setSuppliername(productrequest.getSuppliername());
 			crepo.save(request);
 	   }
 	 
